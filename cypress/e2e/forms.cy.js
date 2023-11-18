@@ -12,7 +12,17 @@ describe('form test', ()=>{
       cy.getDataTest('subscribe-button').click()
       cy.contains('Successfully subbed').should('exist')
       cy.wait(3000)
+      cy.contains('Successfully subbed').should('not.exist')
+      
+      cy.get('@subscribe-input').type('zyzzelxulo9@gmail.io')
+      cy.contains('Invalid email').should('not.exist')
+      cy.getDataTest('subscribe-button').click()
+      cy.contains('Invalid email').should('exist')
+      cy.wait(3000)
 
+      cy.contains('Invalid email').should('not.exist')
+      cy.getDataTest('subscribe-button').click()
+      cy.contains('fail!').should('exist')
   })
 
 })
