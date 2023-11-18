@@ -13,4 +13,12 @@ describe("Various examples", () => {
     cy.getDataTest("nav-fundamentals").click();
     cy.location("pathname").should("equal", "/fundamentals");
   });
+  it.only('intercepts',()=>{
+    cy.intercept("POST",'http://localhost:3000/examples',{
+      body:{
+        message:'successfully interceptado esta request'
+      }
+    })
+    cy.getDataTest('post-button').click()
+  })
 });
