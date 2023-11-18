@@ -14,12 +14,14 @@ describe('form test', ()=>{
       cy.wait(3000)
       cy.contains('Successfully subbed').should('not.exist')
       
+      //mandando form com email invalido
       cy.get('@subscribe-input').type('zyzzelxulo9@gmail.io')
       cy.contains('Invalid email').should('not.exist')
       cy.getDataTest('subscribe-button').click()
       cy.contains('Invalid email').should('exist')
       cy.wait(3000)
 
+      //mandando form sem nada no input
       cy.contains('Invalid email').should('not.exist')
       cy.getDataTest('subscribe-button').click()
       cy.contains('fail!').should('exist')
