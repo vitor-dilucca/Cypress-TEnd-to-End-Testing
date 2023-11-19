@@ -3,12 +3,13 @@
 
 # Contents
 - [Test Unhappy Paths](#1---test-unhappy-paths-)
-- [Enums](#2---enums-)
-- [Static Methods](#3---static-methods-)
-- [Options](#4---options-)
-- [Properties](#5---properties-)
-- [Methods](#6---methods-)
-- [Events](#7---events-)
+- [Use Stable Selectors](#2---use-stable-selectors-)
+- [Do Not Assign Return Values](#3---do-not-assign-return-values-)
+- [Do Not Test External Sites](#4---do-not-test-external-sites-)
+- [Keep Tests Independent](#5---keep-tests-independent-)
+- [Avoid Writing Tiny Tests](#6---avoid-writing-tiny-tests-)
+- [Clean Up State Before Tests Run](#7---clean-up-state-before-tests-run-)
+
 
 ## 1 - Test Unhappy Paths [^](#contents)
 Test scenarios where users might behave maliciously or actions uncommon in your app.
