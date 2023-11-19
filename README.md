@@ -1,14 +1,14 @@
 
 # Best Practices (Recommended by Cypress)
 
-## Contents
-- [Test Unhappy Paths](#1---test-unhappy-paths)
-- [Enums](#2---enums)
-- [Static Methods](#3---static-methods)
-- [Options](#4---options)
-- [Properties](#5---properties)
-- [Methods](#6---methods)
-- [Events](#7---events)
+# Contents
+- [Test Unhappy Paths](#1---test-unhappy-paths-)
+- [Enums](#2---enums-)
+- [Static Methods](#3---static-methods-)
+- [Options](#4---options-)
+- [Properties](#5---properties-)
+- [Methods](#6---methods-)
+- [Events](#7---events-)
 
 ## 1 - Test Unhappy Paths [^](#contents)
 Test scenarios where users might behave maliciously or actions uncommon in your app.
