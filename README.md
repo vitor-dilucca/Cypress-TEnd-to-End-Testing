@@ -13,22 +13,22 @@
 ## 1 - Test Unhappy Paths [^](#contents)
 Test scenarios where users might behave maliciously or actions uncommon in your app.
 
-## 2 - Use Stable Selectors
+## 2 - Use Stable Selectors [^](#contents)
 Utilize data-* attributes for selectors, isolating them from CSS or JS changes. Avoid targeting elements based on CSS attributes like id, class, or tag. Do not rely on elements that might change their textContent. Avoid overly generic selectors (e.g., cy.get(button)). Decouple selectors from styles.
 
-## 3 - Do Not Assign Return Values
+## 3 - Do Not Assign Return Values [^](#contents)
 Cypress does NOT run synchronously. Refer to the *docs.
 
-## 4 - Do Not Test External Sites
+## 4 - Do Not Test External Sites [^](#contents)
 Test only websites under your control. Minimize visits to or reliance on third-party servers. Use cy.request() for 3rd party server interactions via APIs. If possible, cache results using cy.session() to avoid repeated visits.
 
-## 5 - Keep Tests Independent
+## 5 - Keep Tests Independent [^](#contents)
 Avoid interdependent tests, which become hard to manage.
 
-## 6 - Avoid Writing Tiny Tests
+## 6 - Avoid Writing Tiny Tests [^](#contents)
 Writing small tests, similar to unit tests, is non-performant and excessive. It may hinder performance due to Cypress's state resets and test isolation.
 
-## 7 - Clean Up State Before Tests Run
+## 7 - Clean Up State Before Tests Run [^](#contents)
 Avoid cleaning up state with after or afterEach hooks. Cypress manages state between tests. Consider using route aliases or assertions to control Cypress until specific conditions are met. Refer to the *docs.
 
 ---
